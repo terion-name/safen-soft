@@ -1,0 +1,25 @@
+.btn-normal {
+  font-size: $small-size;
+
+  margin: 10px 0;
+  padding: 8px 20px;
+
+  text-transform: uppercase;
+
+  color: $base-blue;
+  border: 1px solid $base-blue;
+  border-radius: $btn-border-radius;
+  &:hover {
+    color: $base-gray;
+    border-color: $base-gray;
+  }
+  &:active,
+  &:focus {
+    text-decoration: none;
+
+    color: $white;
+    border-color: $base-blue;
+    outline: none;
+    background: $base-blue;
+  }
+}

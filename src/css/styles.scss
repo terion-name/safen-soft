@@ -1,12 +1,10 @@
-// @import 'partial/sprite'
-// @import 'partial/mixins'
-// @import 'partial/styles'
-
-@import 'vendor/normalize';
-@import 'vendor/variables';
-@import 'partial/common';
+//@import 'vendor/normalize';
+@import 'partial/variables';
+@import 'partial/mixins';
+@import 'partial/sprite';
 @import 'partial/fonts';
+@import 'partial/common';
 
-p {
-  
-}
+@import 'partial/buttons/buttons';
+@import 'partial/dropdown/dropdown';
+@import 'partial/header/header';

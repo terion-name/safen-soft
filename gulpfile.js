@@ -6,6 +6,7 @@ const gulp = require('gulp'),
   prefixer = require('gulp-autoprefixer'),
   cssmin = require('gulp-minify-css'),
   uglify = require('gulp-uglify'),
+  open = require('gulp-open'),
   rigger = require('gulp-rigger'),
   imagemin = require('gulp-imagemin'),
   spritesmith = require('gulp.spritesmith'),
@@ -41,7 +42,7 @@ const path = {
     htaccess: 'src/.htaccess'
   },
   watch: {
-    html: 'src/*.html',
+    html: 'src/**/*.html',
     js: 'src/js/**/*.js',
     css: 'src/css/**/*.*',
     img: 'src/css/images/**/*.*',
@@ -57,8 +58,8 @@ const path = {
 // local server
 gulp.task('connect', () => {
   connect.server({
-    root: [path.outputDir],
     port: 3000,
+    root: [path.outputDir, 'src'],
     livereload: true
   });
 });
@@ -135,28 +136,27 @@ gulp.task('imagescontent:build', () => {
 
 // css build
 gulp.task('cssOwn:build', () => {
-  gulp.src(path.src.css)
+  return gulp.src(path.src.css) // css: 'src/css/styles.scss',
     .pipe(sourcemaps.init())
     .pipe(sass({
-      compress: true,
-      'include css': true,
-      includePaths: ['./partial']
+      includePaths: ['./dist/css'],
+      errLogToConsole: true
     }))
+    .pipe(sass().on('error', sass.logError))
     .pipe(prefixer({
       browser: ['last 3 version', "> 1%", "ie 8", "ie 7"]
     }))
-    .pipe(sourcemaps.write())
-    .pipe(sourcemaps.init())
+    .pipe(gulp.dest(path.dist.css))
     .pipe(cssmin())
-    .pipe(sourcemaps.write())
     .pipe(rename({
       suffix: '.min'
     }))
+    .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest(path.dist.css))
     .pipe(connect.reload())
 });
 
-// build vebdor css
+//build vendor css
 gulp.task('cssVendor:build', () => {
   gulp.src(path.src.cssVendor)
     .pipe(sourcemaps.init())
@@ -169,7 +169,7 @@ gulp.task('cssVendor:build', () => {
 // all styles build
 gulp.task('css:build', [
   'cssOwn:build',
-  // 'cssVendor:build'
+  //'cssVendor:build'
 ]);
 
 // build fonts
@@ -229,5 +229,16 @@ gulp.task('watch', () => {
   });
 });
 
+// open prooject in browser
+gulp.task('open', () => {
+  let options = {
+    uri: 'http://localhost:3000/index.html',
+    app: 'chrome'
+  };
+  gulp.src(path.dist.html)
+    .pipe(open(options))
+    .pipe(connect.reload())
+});
+
 // default task
-gulp.task('default', ['build', 'watch', 'connect']);
+gulp.task('default', ['build', 'watch', 'connect'], () => gulp.start('open'));

@@ -1,0 +1,44 @@
+.header {
+  margin-bottom: $margin-default;
+  .nav {
+    &-close-icon {
+      display: block;
+
+      margin: 0 auto 15px;
+
+      @include sprite($s-close-icon);
+
+      &:hover {
+        @include sprite($s-close-icon-hover);
+      }
+
+      &:active,
+      &:focus {
+        @include sprite($s-close-icon-active);
+      }
+    }
+    &-menu-icon {
+      display: none;
+
+      @include sprite($s-menu-icon);
+    }
+    .nav-list {
+      font: $nav-font;
+      margin-bottom: $margin-default;
+      &-item {
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .logo {
+    display: none;
+  }
+  .demo {
+    text-align: center;
+    &-link {
+      display: inline-block;
+      @extend .btn-normal;
+    }
+  }
+}

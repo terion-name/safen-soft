@@ -1,0 +1,31 @@
+// FONT
+$base-font-family: 'AvantGardeGothic', sans-serif;
+$base-regular-font: normal normal 14px/18px $base-font-family;
+$nav-font: normal normal 16px/32px $base-font-family;
+$small-size: 12px;
+$normal-size: 14px;
+$medium-size: 16px;
+$large-size: 18px;
+
+// COLORS
+$white: #fff;
+$base-gray: #557276;
+$light-gray: #cad1d3;
+$dark-gray: #39463d;
+$blue-gary: #2f3d4e;
+$base-blue: #076290;
+$deep-blue: #116893;
+
+// LAYOUT
+$container-width: 1240px;
+$container-padding: 30px;
+$container-inner-width: $container-width - (2 * $container-padding);
+
+$margin-default: 20px;
+
+// BUTTONS
+$btn-border-radius: 20px;
+
+
+
+

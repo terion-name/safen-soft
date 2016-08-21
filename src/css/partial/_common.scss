@@ -2,3 +2,25 @@ body {
   font: $base-regular-font;
   color: $base-gray;
 }
+
+.container {
+  max-width: $container-width;
+  margin: auto;
+  padding: $container-padding;
+}
+
+a {
+  color: $base-gray;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $base-blue;
+  }
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
