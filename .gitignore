@@ -1,1 +1,3 @@
-# safen-soft
+/node_modules/
+/dist/
+/.tmp/
