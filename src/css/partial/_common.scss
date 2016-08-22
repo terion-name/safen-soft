@@ -1,5 +1,6 @@
 body {
   font: $base-regular-font;
+
   color: $base-gray;
 }
 
@@ -9,18 +10,25 @@ body {
   padding: $container-padding;
 }
 
+.wrapper {
+  max-width: 100%;
+  padding: 20px;
+}
+
 a {
-  color: $base-gray;
   text-decoration: none;
-  &:hover,
-  &:focus {
+
+  color: $base-gray;
+  &:hover,&:focus {
     text-decoration: none;
+
     color: $base-blue;
   }
 }
 
 ul {
-  list-style: none;
   margin: 0;
   padding: 0;
+
+  list-style: none;
 }
