@@ -1,44 +1,92 @@
 .header {
   margin-bottom: $margin-default;
-  .nav {
-    &-close-icon {
-      display: block;
+  &.expanded {
+    position: relative;
+    .nav {
+      &-close-icon {
+        display: block;
 
-      margin: 0 auto 15px;
+        margin: 0 auto 15px;
 
-      @include sprite($s-close-icon);
-
-      &:hover {
-        @include sprite($s-close-icon-hover);
+        @include sprite($s-close-icon);
+        &:hover {
+          @include sprite($s-close-icon-hover);
+        }
+        &:active,&:focus {
+          @include sprite($s-close-icon-active);
+        }
       }
+      &-menu-icon {
+        display: none;
 
-      &:active,
-      &:focus {
-        @include sprite($s-close-icon-active);
+        @include sprite($s-menu-icon);
+      }
+      .nav-list {
+        font: $nav-font;
+
+        margin-bottom: $margin-default;
+        &-item {
+          text-align: center;
+          text-transform: uppercase;
+        }
       }
     }
-    &-menu-icon {
+    .logo {
       display: none;
-
-      @include sprite($s-menu-icon);
     }
-    .nav-list {
-      font: $nav-font;
-      margin-bottom: $margin-default;
-      &-item {
-        text-align: center;
-        text-transform: uppercase;
+    .demo {
+      text-align: center;
+      &-link {
+        display: inline-block;
+
+        @extend .btn-normal;
       }
     }
+    // &:before {
+    //   content: "";
+    //   @include abs(0, 0, 0, 0);
+    //   background: $white;
+    //   z-index: 1010;
+    //   opacity: 0;
+    // }
   }
-  .logo {
-    display: none;
-  }
-  .demo {
-    text-align: center;
-    &-link {
+  &.collapsed {
+    display: flex;
+
+    width: 100%;
+
+    align-items: center;
+    align-content: space-between;
+    .nav,.logo,.demo {
+      width: 33.33%;
+    }
+    .nav {
+      &-menu-icon {
+        display: block;
+
+        @include sprite($s-menu-icon);
+      }
+      &-list {
+        display: none;
+      }
+    }
+    .logo {
       display: inline-block;
-      @extend .btn-normal;
+
+      text-align: center;
+    }
+    .demo {
+      text-align: right;
+      &-link {
+        display: inline-block;
+
+        text-align: center;
+
+        @extend .btn-normal;
+      }
+    }
+    .nav-select {
+      display: none;
     }
   }
 }

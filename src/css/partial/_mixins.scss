@@ -1,0 +1,21 @@
+// @mixin non-visible($transition) {
+//   opacity: 0;
+//   visibility: hidden;
+//   position: absolute;
+//   transition: all $transition;
+// }
+
+// @mixin visible($transition) {
+//   opacity: 1;
+//   visibility: visible;
+//   position: static;
+//   transition: all $transition;
+// }
+
+@mixin abs($top, $right, $bottom, $left) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
