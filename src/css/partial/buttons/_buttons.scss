@@ -6,12 +6,12 @@
 
   text-transform: uppercase;
 
-  color: $base-blue;
-  border: 1px solid $base-blue;
+  color: $base-gray;
+  border: $base-border $base-gray;
   border-radius: $btn-border-radius;
   &:hover {
-    color: $base-gray;
-    border-color: $base-gray;
+    color: $base-blue;
+    border-color: $base-blue;
   }
   &:active,
   &:focus {

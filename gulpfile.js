@@ -139,19 +139,19 @@ gulp.task('cssOwn:build', () => {
   return gulp.src(path.src.css) // css: 'src/css/styles.scss',
     .pipe(sourcemaps.init())
     .pipe(sass({
-      includePaths: ['./dist/css'],
+      includePaths: [path.dist.css],
       errLogToConsole: true
     }))
     .pipe(sass().on('error', sass.logError))
     .pipe(prefixer({
       browser: ['last 3 version', "> 1%", "ie 8", "ie 7"]
     }))
-    .pipe(gulp.dest(path.dist.css))
-    .pipe(cssmin())
-    .pipe(rename({
-      suffix: '.min'
-    }))
     .pipe(sourcemaps.write('./maps'))
+    .pipe(gulp.dest(path.dist.css))
+    // .pipe(cssmin())
+    // .pipe(rename({
+    //   suffix: '.min'
+    // }))
     .pipe(gulp.dest(path.dist.css))
     .pipe(connect.reload())
 });
