@@ -13,15 +13,17 @@ $white: #fff;
 $base-gray: #557276;
 $light-gray: #cad1d3;
 $dark-gray: #39463d;
-$blue-gary: #2f3d4e;
+$blue-gray: #2f3d4e;
 $base-blue: #076290;
 $deep-blue: #116893;
+$demo-gray: #cad1d3;
 
 // LAYOUT
 $container-width: 1240px;
 $container-padding: 30px;
 $container-inner-width: $container-width - (2 * $container-padding);
 $margin-default: 20px;
+$padding-default: 20px;
 
 // BORDERS
 $base-border: 2px solid;
