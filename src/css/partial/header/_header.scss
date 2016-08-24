@@ -28,6 +28,9 @@
         &-item {
           text-align: center;
           text-transform: uppercase;
+          &:hover {
+            font-weight: bold;
+          }
         }
       }
     }
@@ -42,13 +45,6 @@
         @extend .btn-normal;
       }
     }
-    // &:before {
-    //   content: "";
-    //   @include abs(0, 0, 0, 0);
-    //   background: $white;
-    //   z-index: 1010;
-    //   opacity: 0;
-    // }
   }
   &.collapsed {
     display: flex;
