@@ -1,0 +1,324 @@
+.gui {
+  text-align: center;
+
+  background: $light-gray;
+  background-attachment: scroll;
+  &-bg {
+    width: 100%;
+    height: 494px;
+
+    background: url('images/gui-bg.jpg' );
+    background-position: 50% 50%;
+    background-size: cover;
+
+    @include abs(0, 0, 0 ,0);
+  }
+  &-content {
+    .gui-title {
+      position: relative;
+
+      color: $white;
+    }
+    img {
+      position: relative;
+    }
+  }
+  &-elements {
+    background: $light-gray;
+
+    @include abs(494px, 0, auto ,0);
+  }
+}
+
+.small-caption {
+  font-size: $small-size - 2;
+
+  margin: 20px 0 10px;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+// NAVIGATION
+.navigation-normal {
+  display: table;
+
+  width: 100%;
+  height: 100%;
+  min-height: 535px;
+  padding: 73px 10px 40px;
+
+  vertical-align: middle;
+
+  border-bottom: 10px solid $base-gray;
+  background: $white;
+  .nav {
+    &-close-icon {
+      display: block;
+
+      margin: 0 auto 15px;
+
+      @include sprite($s-close-icon);
+    }
+    .nav-list {
+      font: $base-nav-font;
+
+      margin-bottom: $margin-default + 20;
+      &-item {
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .demo {
+    text-align: center;
+    &-link {
+      display: inline-block;
+
+      @extend .btn-normal;
+    }
+  }
+}
+.navigation-hover {
+  @extend .navigation-normal;
+  .nav {
+    &-close-icon {
+      @include sprite($s-close-icon-hover);
+    }
+  }
+  & * {
+    color: $base-blue;
+  }
+  .demo {
+    &-link {
+      @extend .btn-normal:hover;
+    }
+  }
+}
+.navigation-active {
+  @extend .navigation-hover;
+  .nav {
+    &-close-icon {
+      @include sprite($s-close-icon-active);
+    }
+    .nav-list {
+      &-item {
+        font-weight: bold;
+      }
+    }
+  }
+  .demo {
+    &-link {
+      @extend .btn-normal:active;
+    }
+  }
+}
+
+
+// PRODUCTS CARDS
+.products-card {
+  width: 100;
+  min-height: 400px;
+
+  color: $white;
+  .products-content {
+    font-weight: bold;
+
+    padding: 35px 0 15px;
+
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .product-img {
+    width: 100%;
+    height: 180px;
+  }
+  .products-caption,.products-info {
+    font-weight: normal;
+
+    padding: 5px 20px;
+
+    text-align: center;
+    text-transform: none;
+  }
+  .btn.btn-normal {
+    transition: all 1.2s;
+
+    opacity: 0;
+  }
+  &-first,&-second,&-third {
+    transition: all .8s;
+    &:hover {
+      cursor: pointer;
+
+      background: $white;
+      .products-caption {
+        color: $base-blue;
+      }
+      .products-info {
+        color: $green-gray;
+      }
+      .btn.btn-normal {
+        opacity: 1;
+      }
+    }
+  }
+  &-first {
+    background: $green-gray;
+    .product-img {
+      background: url('images/enterprise-suite.png') no-repeat;
+      background-position: 50% 50%;
+    }
+    &:hover {
+      .product-img {
+        background: url('images/enterprise-suite-hover.png') no-repeat;
+        background-position: 54% 50%;
+      }
+    }
+  }
+  &-second {
+    background: $base-blue;
+    .product-img {
+      background: url('images/oberon-product.png') no-repeat;
+      background-position: 50% 50%;
+    }
+    &:hover {
+      .product-img {
+        background: url('images/oberon-product-hover.png') no-repeat;
+        background-position: 56% 50%;
+      }
+    }
+  }
+  &-third {
+    background: $light-blue;
+    .product-img {
+      background: url('images/tp-secure.png') no-repeat;
+      background-position: 50% 50%;
+    }
+    &:hover {
+      .product-img {
+        background: url('images/tp-secure-hover.png') no-repeat;
+        background-position: 56% 50%;
+      }
+    }
+  }
+}
+
+
+// DROPDOWNS
+.selectors {
+  min-height: 250px;
+}
+.dropdown.dropdown-default {
+  .btn {
+    font-size: $small-size;
+
+    width: 370px;
+    margin-bottom: 0;
+    padding: 15px;
+
+    text-align: left;
+    text-transform: none;
+
+    color: $green-gray;
+    border: 1px solid $base-blue;
+    border-radius: 3px;
+    background: $white;
+    .arrow-down {
+      transition: all .8s;
+
+      @include sprite($s-arrow-down);
+    }
+  }
+  .btn[aria-expanded='true'] {
+    .arrow-down {
+      transform: rotate(180deg);
+    }
+  }
+  &:hover {
+    .btn {
+      color: $base-blue;
+    }
+  }
+  .dropdown-menu {
+    width: 370px;
+    margin: 5px 0;
+    padding: 0;
+  }
+  .dropdown-menu > li > a {
+    font-size: $small-size;
+
+    padding: 15px;
+
+    color: $green-gray;
+    &:hover {
+      color: $white;
+      background: $base-blue;
+    }
+  }
+}
+
+.dropdown.dropdown-rounded {
+  .btn {
+    width: 370px;
+    margin-bottom: 0;
+    padding: 10px 20px;
+
+    text-align: left;
+
+    color: $white;
+    border: $base-border $white;
+    border-radius: $btn-border-radius;
+    background: $light-gray;
+    .fa-chevron-down {
+      transition: all .8s;
+    }
+    &:active {
+      outline: none;
+    }
+    &:hover {
+      color: $base-blue;
+      background: $white;
+    }
+  }
+  .btn[aria-expanded='true'] {
+    .fa-chevron-down {
+      transform: rotate(180deg);
+    }
+  }
+  .dropdown-menu {
+    width: 370px;
+    margin: 5px 0;
+    padding: 0;
+
+    border: $base-border $white;
+    border-radius: $btn-border-radius;
+    background: $light-gray;
+    box-shadow: none;
+  }
+  .dropdown-menu > li > a {
+    font-size: $small-size;
+
+    padding: 15px;
+
+    text-transform: uppercase;
+
+    color: $white;
+    &:hover {
+      color: $base-blue;
+      background: $white;
+    }
+  }
+  .dropdown-menu > li:first-child > a {
+    &:hover {
+      border-top-left-radius: $btn-border-radius;
+      border-top-right-radius: $btn-border-radius;
+    }
+  }
+  .dropdown-menu > li:last-child > a {
+    &:hover {
+      border-bottom-right-radius: $btn-border-radius;
+      border-bottom-left-radius: $btn-border-radius;
+    }
+  }
+}

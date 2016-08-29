@@ -2,6 +2,7 @@
 $base-font-family: 'AvantGardeGothic', sans-serif;
 $base-regular-font: normal normal 14px/18px $base-font-family;
 $nav-font: normal normal 16px/32px $base-font-family;
+$base-nav-font: normal normal 20px/40px $base-font-family;
 $normal-font: normal normal 16px/28px $base-font-family;
 $small-size: 12px;
 $normal-size: 14px;
@@ -15,7 +16,9 @@ $light-gray: #cad1d3;
 $dark-gray: #39463d;
 $blue-gray: #2f3d4e;
 $base-blue: #076290;
+$light-blue: #0c7cbd;
 $deep-blue: #116893;
+$green-gray: #5b777b;
 $demo-gray: #cad1d3;
 $footer-bg: #39463d;
 
@@ -25,6 +28,17 @@ $container-padding: 30px;
 $container-inner-width: $container-width - (2 * $container-padding);
 $margin-default: 20px;
 $padding-default: 20px;
+
+// GRID
+$grid-columns: 12;
+$grid-max-width: 1170px;
+
+// BREAKPOINTS
+$mobile: 'only screen and (min-width: 320px)';
+$tablet-small: 'only screen and (min-width: 480px)';
+$tablet-large: 'only screen and (min-width: 768px)';
+$screen-small: 'only screen and (min-width: 1024px)';
+$screen-large: 'only screen and (min-width: 1280)';
 
 // BORDERS
 $base-border: 2px solid;

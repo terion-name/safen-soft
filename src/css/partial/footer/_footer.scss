@@ -48,7 +48,10 @@
     }
   }
   &-contacts,&-copyright,&-logo {
+    box-sizing: border-box;
     display: table-cell;
+
+    vertical-align: top;
     p {
       margin-bottom: $margin-default - 5;
     }
@@ -56,24 +59,30 @@
   &-contacts {
     font-size: $large-size;
 
-    width: 32%;
+    width: 30%;
   }
   &-copyright {
     font-size: $small-size;
 
-    width: 56%;
+    width: 60%;
+    padding: 0 10%;
   }
   &-logo {
     font-size: $small-size;
 
-    width: 12%;
+    width: 10%;
+
+    text-align: right;
     span {
       color: rgba($demo-gray, .5);
+      font-size: $small-size;
     }
     img {
       display: block;
 
       margin-top: 10px;
+      margin-right: 0;
+      margin-left: auto;
     }
   }
 }
