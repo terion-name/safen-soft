@@ -1,181 +1,85 @@
-<section class="gui">
-  <div class="gui-bg"></div>
-  <div class="gui-content">
-    <a href="/"><img src="css/images/gui-logo.png" alt="gui-logo"></a>
-    <h1 class="gui-title">USER INTERFACE PATTERN</h1>
-  </div>
-</section>
-<section class="gui-elements">
-  <div class="container">
-    <div class="row small-caption"><strong>Основное меню</strong></div>
-    <div class="row">
-      <div class="column-4">
-        <div class="navigation-normal">
-          <nav class="nav">
-            <a href="#" class="nav-close-icon"></a>
-            <a href="#" class="nav-menu-icon"></a>
-            <ul class="nav-list">
-              <li class="nav-list-item">
-                <a href="#" class="nav-item-link">Главная</a>
-              </li>
-              <li class="nav-list-item">
-                <a href="#" class="nav-item-link">Продукты</a>
-              </li>
-              <li class="nav-list-item">
-                <a href="#" class="nav-item-link">О компании</a>
-              </li>
-              <li class="nav-list-item">
-                <a href="#" class="nav-item-link">Служба поддержки</a>
-              </li>
-              <li class="nav-list-item">
-                <a href="#" class="nav-item-link">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="demo">
-            <a href="#" class="demo-link">Скачать Демо</a>
+<div class="container">
+  <section class="gui">
+    <!--<div class="gui-bg"></div>
+    <div class="gui-content">
+      <a href="/"><img src="css/images/gui-logo.png" alt="gui-logo"></a>
+      <h1 class="gui-title">USER INTERFACE PATTERN</h1>
+    </div> -->
+  </section>
+  <section class="gui-elements">
+    <div class="container">
+      <div class="row small-caption"><strong>карточки програмных продуктов</strong></div>
+      <div class="row">
+        <div class="column-4 no-padding products-card products-card-first">
+          <div class="products-content">
+            <div class="product-img"></div>
+            <h2 class="products-caption"><strong>Enterprise Suite</strong></h2>
+            <p class="products-info">Оптимально подходит для защиты устройств самообслуживания, использующих как низко-, так и высокоскоростные каналы связи.</p>
+            <a href="#" class="btn btn-normal">Скачать Демо</a>
           </div>
-          <div class="nav-select">
-            <div class="select">
-              <input type="checkbox" id="toggle" class="toggle">
-              <label for="toggle">русский <i class="arrow-down"></i></label>
-              <ul>
-                <li class="select-option"><input type="radio" name="choice" id="c1" value="c1"><label for="c1">english</label></li>
+        </div>
+        <div class="column-4 no-padding products-card products-card-second">
+          <div class="products-content">
+            <div class="product-img"></div>
+            <h2 class="products-caption"><strong>Oberon</strong></h2>
+            <p class="products-info">Оптимально подходит для защиты устройств самообслуживания, использующих как низко-, так и высокоскоростные каналы связи.</p>
+            <a href="#" class="btn btn-normal">Скачать Демо</a>
+          </div>
+        </div>
+        <div class="column-4 no-padding products-card products-card-third">
+          <div class="products-content">
+            <div class="product-img"></div>
+            <h2 class="products-caption"><strong>TP Secure</strong></h2>
+            <p class="products-info">Оптимально подходит для защиты устройств самообслуживания, использующих как низко-, так и высокоскоростные каналы связи.</p>
+            <a href="#" class="btn btn-normal">Скачать Демо</a>
+          </div>
+        </div>
+      </div>
+      <div class="row small-caption"><strong>Выпадающие списки</strong></div>
+      <div class="row selectors">
+        <div class="column-6">
+          <div class="center-block">
+            <div class="dropdown dropdown-default">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+                Выберите продукт
+                <span class="arrow-down pull-right"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Продукт #1</a></li>
+                <li><a href="#">Продукт #2</a></li>
+                <li><a href="#">Продукт #3</a></li>
               </ul>
             </div>
           </div>
         </div>
-      </div>
-      <div class="column-4">
-        <div class="navigation-hover">
-          <nav class="nav">
-            <a href="#" class="nav-close-icon"></a>
-            <a href="#" class="nav-menu-icon"></a>
-            <ul class="nav-list">
-              <li class="nav-list-item">
-                <a href="#" class="nav-item-link">Главная</a>
-              </li>
-              <li class="nav-list-item">
-                <a href="#" class="nav-item-link">Продукты</a>
-              </li>
-              <li class="nav-list-item">
-                <a href="#" class="nav-item-link">О компании</a>
-              </li>
-              <li class="nav-list-item">
-                <a href="#" class="nav-item-link">Служба поддержки</a>
-              </li>
-              <li class="nav-list-item">
-                <a href="#" class="nav-item-link">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="demo">
-            <a href="#" class="demo-link">Скачать Демо</a>
-          </div>
-          <div class="nav-select">
-            <div class="select">
-              <input type="checkbox" id="toggle1" class="toggle" checked="checked">
-              <label for="toggle1">русский <i class="arrow-down"></i></label>
-              <ul>
-                <li class="select-option"><input type="radio" name="choice" id="c1" value="c1"><label for="c1">english</label></li>
-              </ul>
+        <div class="column-6">
+          <div class="center-block">
+            <div class="dropdown dropdown-rounded">
+                <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+                  Выберите продукт
+                  <span class="fa fa-chevron-down pull-right"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Продукт #1</a></li>
+                  <li><a href="#">Продукт #2</a></li>
+                  <li><a href="#">Продукт #3</a></li>
+                </ul>
+              </div>
             </div>
-          </div>
         </div>
       </div>
-      <div class="column-4">
-        <div class="navigation-active">
-          <nav class="nav">
-            <a href="#" class="nav-close-icon"></a>
-            <a href="#" class="nav-menu-icon"></a>
-            <ul class="nav-list">
-              <li class="nav-list-item">
-                <a href="#" class="nav-item-link">Главная</a>
-              </li>
-              <li class="nav-list-item">
-                <a href="#" class="nav-item-link">Продукты</a>
-              </li>
-              <li class="nav-list-item">
-                <a href="#" class="nav-item-link">О компании</a>
-              </li>
-              <li class="nav-list-item">
-                <a href="#" class="nav-item-link">Служба поддержки</a>
-              </li>
-              <li class="nav-list-item">
-                <a href="#" class="nav-item-link">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="demo">
-            <a href="#" class="demo-link">Скачать Демо</a>
-          </div>
-          <div class="nav-select">
-            <div class="select">
-              <input type="checkbox" id="toggle2" class="toggle">
-              <label for="toggle2">english <i class="arrow-down"></i></label>
-              <ul>
-                <li class="select-option"><input type="radio" name="choice" id="c1" value="c1"><label for="c1">english</label></li>
-              </ul>
-            </div>
-          </div>
+      <div class="row small-caption"><strong>Текстовые поля</strong></div>
+      <div class="row selectors">
+        <div class="column-4">
+          
+        </div>
+        <div class="column-4">
+          
+        </div>
+        <div class="column-4">
+          
         </div>
       </div>
     </div>
-    <div class="row small-caption"><strong>карточки програмных продуктов</strong></div>
-    <div class="row">
-      <div class="column-4 no-padding products-card products-card-first">
-        <div class="products-content">
-          <div class="product-img"></div>
-          <h2 class="products-caption"><strong>Enterprise Suite</strong></h2>
-          <p class="products-info">Оптимально подходит для защиты устройств самообслуживания, использующих как низко-, так и высокоскоростные каналы связи.</p>
-          <a href="#" class="btn btn-normal">Скачать Демо</a>
-        </div>
-      </div>
-      <div class="column-4 no-padding products-card products-card-second">
-        <div class="products-content">
-          <div class="product-img"></div>
-          <h2 class="products-caption"><strong>Oberon</strong></h2>
-          <p class="products-info">Оптимально подходит для защиты устройств самообслуживания, использующих как низко-, так и высокоскоростные каналы связи.</p>
-          <a href="#" class="btn btn-normal">Скачать Демо</a>
-        </div>
-      </div>
-      <div class="column-4 no-padding products-card products-card-third">
-        <div class="products-content">
-          <div class="product-img"></div>
-          <h2 class="products-caption"><strong>TP Secure</strong></h2>
-          <p class="products-info">Оптимально подходит для защиты устройств самообслуживания, использующих как низко-, так и высокоскоростные каналы связи.</p>
-          <a href="#" class="btn btn-normal">Скачать Демо</a>
-        </div>
-      </div>
-    </div>
-    <div class="row small-caption"><strong>Выпадающие списки</strong></div>
-    <div class="row selectors">
-      <div class="column-6">
-        <div class="dropdown dropdown-default">
-          <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
-            Выберите продукт
-            <span class="arrow-down pull-right"></span>
-          </button>
-          <ul class="dropdown-menu">
-            <li><a href="#">Продукт #1</a></li>
-            <li><a href="#">Продукт #2</a></li>
-            <li><a href="#">Продукт #3</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="column-6">
-        <div class="dropdown dropdown-rounded">
-          <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
-            Выберите продукт
-            <span class="fa fa-chevron-down pull-right"></span>
-          </button>
-          <ul class="dropdown-menu">
-            <li><a href="#">Продукт #1</a></li>
-            <li><a href="#">Продукт #2</a></li>
-            <li><a href="#">Продукт #3</a></li>
-          </ul>
-        </div>      
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
+</div>
