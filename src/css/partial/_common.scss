@@ -1,30 +1,33 @@
 body {
   font: $base-regular-font;
-
   color: $base-gray;
 }
 
-.container {
-  max-width: $container-width;
+.wrapper {
+  max-width: $wrapper-width;
   margin: auto;
-  padding: $container-padding;
-  padding-bottom: 0;
 }
 
-.wrapper {
+.container {
   width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 20px;
+  margin: auto;
+}
+
+.row-no-margin {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.full-width {
+  width: 100%;
 }
 
 a {
   text-decoration: none;
-
   color: $base-gray;
-  &:hover,&:focus {
+  &:hover,
+  &:focus {
     text-decoration: none;
-
     color: $base-blue;
   }
 }
@@ -32,6 +35,20 @@ a {
 ul {
   margin: 0;
   padding: 0;
-
   list-style: none;
+}
+
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+
+  @include border-box;
+}
+
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
 }

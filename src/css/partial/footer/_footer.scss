@@ -1,16 +1,14 @@
+.footer-bg {
+  width: 100%;
+  height: 310px;
+
+  background: $footer-bg;
+}
 .footer {
   display: table;
 
   width: 100%;
   height: 310px;
-  &-bg {
-    width: 100%;
-    height: 310px;
-
-    background: $footer-bg;
-
-    @include abs(auto, 0, auto, 0);
-  }
   &-content {
     position: relative;
 

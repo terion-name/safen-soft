@@ -1,26 +1,17 @@
+.download-demo-bg {
+  height: 220px;
+  margin-top: $margin-default;
+  background: $demo-gray;
+}
 .download-demo {
   display: table;
-
-  height: 220px;
   width: 100%;
   margin: $margin-default 0 0 0;
-
   background: $demo-gray;
-  &-bg {
-    width: 100%;
-    height: 220px;
-
-    background: $demo-gray;
-
-    @include abs(auto, 0, auto, 0);
-  }
   &-content {
     position: relative;
-
     display: table-cell;
-
     margin: auto;
-
     text-align: center;
     vertical-align: middle;
   }

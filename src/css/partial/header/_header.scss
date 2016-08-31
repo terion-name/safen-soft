@@ -1,18 +1,19 @@
 .header {
+  margin-top: $margin-default;
   margin-bottom: $margin-default;
   &.expanded {
     position: relative;
     .nav {
       &-close-icon {
         display: block;
-
         margin: 0 auto 15px;
 
         @include sprite($s-close-icon);
         &:hover {
           @include sprite($s-close-icon-hover);
         }
-        &:active,&:focus {
+        &:active,
+        &:focus {
           @include sprite($s-close-icon-active);
         }
       }
@@ -23,7 +24,6 @@
       }
       .nav-list {
         font: $nav-font;
-
         margin-bottom: $margin-default;
         &-item {
           text-align: center;
@@ -48,12 +48,13 @@
   }
   &.collapsed {
     display: flex;
-
     width: 100%;
 
     align-items: center;
     align-content: space-between;
-    .nav,.logo,.demo {
+    .nav,
+    .logo,
+    .demo {
       width: 33.33%;
     }
     .nav {
@@ -68,14 +69,12 @@
     }
     .logo {
       display: inline-block;
-
       text-align: center;
     }
     .demo {
       text-align: right;
       &-link {
         display: inline-block;
-
         text-align: center;
 
         @extend .btn-normal;
