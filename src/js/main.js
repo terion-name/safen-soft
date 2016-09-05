@@ -5,8 +5,6 @@
 
   window.onload = toggleBtn;
 
-  console.log('WooHoo :D');
-
   function toggleBtn() {
     const collapseMenu = document.getElementById('collapse-menu'),
           expandMenu = document.getElementById('expand-menu'),

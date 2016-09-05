@@ -1,0 +1,44 @@
+.clients {
+  margin-top: $margin-huge auto;
+  .clients-caption {
+    line-height: 32px;
+
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .clients-list {
+    margin: $margin-huge auto $margin-default;;
+    p {
+      text-align: center;
+    }
+    li {
+      display: inline-block;
+    }
+  }
+  .thumbnails {
+    display: table;
+
+    width: 100%;
+  }
+  .viewport {
+    display: table-cell;
+  }
+  .overview {
+    display: table;
+
+    width: 100%;
+    li {
+      display: table-cell;
+    }
+  }
+  .buttons {
+    display: table-cell;
+
+    vertical-align: top;
+
+    @include sprite($s-arrow-circle);
+    &.prev {
+      transform: rotate(180deg);
+    }
+  }
+}

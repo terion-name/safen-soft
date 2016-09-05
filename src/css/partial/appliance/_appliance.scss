@@ -1,0 +1,35 @@
+.appliance {
+  margin-top: $margin-huge;
+  .appliance-caption {
+    line-height: 32px;
+
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .appliance-list {
+    margin-top: $margin-huge;
+    margin-bottom: $margin-default;
+    p {
+      text-align: center;
+    }
+  }
+  .appliance-image {
+    width: 220px;
+    height: 200px;
+    margin: auto;
+    margin-top: $margin-default;
+    margin-bottom: $margin-default;
+  }
+  .appliance-a {
+    @include sprite($s-case-a);
+  }
+  .appliance-b {
+    @include sprite($s-case-b);
+  }
+  .appliance-c {
+    @include sprite($s-case-c);
+  }
+  .appliance-d {
+    @include sprite($s-case-d);
+  }
+}

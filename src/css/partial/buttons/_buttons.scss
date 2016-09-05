@@ -30,6 +30,23 @@
   }
 }
 
+.btn-light {
+  font-size: $small-size;
+
+  color: $white;
+  border: $base-border $white;
+
+  @extend .btn;
+  &:hover {
+    color: $light-gray;
+    border-color: $light-gray;
+  }
+  &:active,&:focus {
+    color: $light-gray-active;
+    border-color: $light-gray-active;
+  }
+}
+
 .btn-demo {
   font-size: $medium-size;
   font-weight: bold;

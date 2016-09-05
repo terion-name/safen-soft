@@ -15,82 +15,112 @@
     <script src="js/main.min.js"></script>
   </head>
   <body>
-    <div class="wrapper">
-      <div class="container">
-        <header id="header" class="header collapsed">
-          <nav class="nav">
-            <a href="#" id="collapse-menu" class="nav-close-icon"></a>
-            <a href="#" id="expand-menu" class="nav-menu-icon"></a>
-            <ul class="nav-list">
-              <li class="nav-list-item">
-                <a href="#" class="nav-item-link">Главная</a>
-              </li>
-              <li class="nav-list-item">
-                <a href="#" class="nav-item-link">Продукты</a>
-              </li>
-              <li class="nav-list-item">
-                <a href="#" class="nav-item-link">О компании</a>
-              </li>
-              <li class="nav-list-item">
-                <a href="#" class="nav-item-link">Служба поддержки</a>
-              </li>
-              <li class="nav-list-item">
-                <a href="#" class="nav-item-link">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="logo">
-            <img src="css/images/logo.png" alt="">
-          </div>
-          <div class="demo">
-            <a href="/gui.html" class="demo-link">Скачать Демо</a>
-          </div>
-          <div class="nav-select">
-            <div class="select">
-              <input type="checkbox" id="toggle" class="toggle">
-              <label for="toggle">русский <i class="arrow-down"></i></label>
-              <ul>
-                <li class="select-option"><input type="radio" name="choice" id="c1" value="c1"><label for="c1">english</label></li>
-              </ul> 
-            </div>
-          </div>
-        </header>
-      </div>
-    </div>
-    <div class="slider-background">
+    <div class="header-bg" id="header-bg">
       <div class="wrapper">
         <div class="container">
-          <section class="slider">
-            <section class="slider">
-              <div class="slider-background"></div>
-              <div class="slider-content">
-                <header class="slider-title">
-                  <h2 class="slider-caption">
-                  SafenSoft TPSecure обеспечивает защиту электронных устройств самообслуживания
-                  </h2>
-                </header>
-                <div class="slider-date">
-                  <p>14/06/2016</p>
-                </div>
-                <article class="slider-article">
-                  <p>Использование SafenSoft TPSecure совместно со специальной версией SafenSoft TPSecure Teller Edition для защиты рабочих мест сотрудников фронтофиса банка (операционисты, касса) и SafenSoft Enterprise Suite для защиты бэкофиса (менеджеры и другой персонал) позволяет построить единую систему защиты от внешних (вредоносное ПО, хакеры) и внутренних угроз (инсайдеры, недобросовестные сотрудники).</p>
-                </article>
+          <header id="header" class="header collapsed">
+            <div class="elements">
+              <nav class="nav">
+                <a href="#" id="collapse-menu" class="nav-close-icon"></a>
+                <a href="#" id="expand-menu" class="nav-menu-icon"></a>
+                <ul class="nav-list">
+                  <li class="nav-list-item">
+                    <a href="#" class="nav-item-link">Главная</a>
+                  </li>
+                  <li class="nav-list-item">
+                    <a href="#" class="nav-item-link">Продукты</a>
+                  </li>
+                  <li class="nav-list-item">
+                    <a href="#" class="nav-item-link">О компании</a>
+                  </li>
+                  <li class="nav-list-item">
+                    <a href="#" class="nav-item-link">Служба поддержки</a>
+                  </li>
+                  <li class="nav-list-item">
+                    <a href="#" class="nav-item-link">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="logo">
+                <img src="css/images/logo-main.png" alt="">
               </div>
+              <div class="demo">
+                <a href="/gui.html" class="demo-link">Скачать Демо</a>
+              </div>
+            </div>
+            <section class="carousel">
+              <h3 class="carousel-title">Программное обеспечение для защиты
+              Вашего бизнеса</h3>
+              <img src="css/images/carousel-mockup.png" alt="">
             </section>
+            <div class="nav-select">
+              <div class="select">
+                <input type="checkbox" id="toggle" class="toggle">
+                <label for="toggle">русский <i class="arrow-down"></i></label>
+                <ul>
+                  <li class="select-option"><input type="radio" name="choice" id="c1" value="c1"><label for="c1">english</label></li>
+                </ul>
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+    </div>
+    <div class="appliance-section">
+      <div class="wrapper">
+        <div class="container">
+          <section class="appliance">
+            <h3 class="appliance-caption">
+            Продукты Oberon уже установлены<br>
+            на более чем 100 000+ устройствах
+            </h3>
+            <div class="row appliance-list">
+              <div class="col-md-3 col-sm-6">
+                <div class="appliance-image appliance-a"></div>
+                <p>Защищаем банкоматы от атак</p>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="appliance-image appliance-b"></div>
+                <p>Берем под охрану платежные терминалы</p>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="appliance-image appliance-c"></div>
+                <p>Защищаем игровые автоматы от мошенников</p>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="appliance-image appliance-d"></div>
+                <p>Обеспечиваем безопасность компьютеров в офисе</p>
+              </div>
+            </div>
           </section>
         </div>
       </div>
     </div>
-    <div class="wrapper">
+    <div class="clients-section">
+      <div class="wrapper">
         <div class="container">
-          <div class="main-content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure facilis omnis sit, assumenda consequuntur rem voluptatum. Fugit corrupti magnam distinctio incidunt recusandae quis possimus ab veritatis maxime quasi, ut dicta assumenda sunt, ratione beatae, perferendis. Quas ut, est atque beatae nobis ratione pariatur, corporis molestiae ipsa velit dolorum? Doloribus voluptas aliquid perferendis nesciunt rerum totam sed accusantium alias reiciendis delectus, consectetur ab deserunt accusamus minima mollitia ullam, cum excepturi asperiores vitae illo! Nesciunt odit ullam commodi dolores aliquid voluptates odio illo recusandae earum consequuntur quaerat natus, atque excepturi ipsa omnis autem quibusdam consequatur facere vero! Officia facilis ad eum quaerat recusandae asperiores totam doloribus ex maiores blanditiis, iure alias accusamus unde pariatur odit esse mollitia debitis maxime eligendi voluptates! Ducimus dolores earum odio nostrum sint dolore, cupiditate enim eveniet? Eum harum odio eligendi pariatur est sint illo quod ipsam tempora, suscipit laudantium quo error aliquam mollitia voluptatum sit sequi iste temporibus eveniet, quas ipsum. Porro at, debitis iste qui ad quia illo ipsa quo consequatur, exercitationem sed, architecto veniam est assumenda eligendi numquam minus tempore vitae aliquid esse. Vel quis soluta nesciunt porro ad! Ratione voluptatem, officia illum sequi fugit praesentium laboriosam molestias dolores ea incidunt blanditiis, quo? Odit, atque.
-          </div>
-          <p></p>
-          <div class="main-content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure facilis omnis sit, assumenda consequuntur rem voluptatum. Fugit corrupti magnam distinctio incidunt recusandae quis possimus ab veritatis maxime quasi, ut dicta assumenda sunt, ratione beatae, perferendis. Quas ut, est atque beatae nobis ratione pariatur, corporis molestiae ipsa velit dolorum? Doloribus voluptas aliquid perferendis nesciunt rerum totam sed accusantium alias reiciendis delectus, consectetur ab deserunt accusamus minima mollitia ullam, cum excepturi asperiores vitae illo! Nesciunt odit ullam commodi dolores aliquid voluptates odio illo recusandae earum consequuntur quaerat natus, atque excepturi ipsa omnis autem quibusdam consequatur facere vero! Officia facilis ad eum quaerat recusandae asperiores totam doloribus ex maiores blanditiis, iure alias accusamus unde pariatur odit esse mollitia debitis maxime eligendi voluptates! Ducimus dolores earum odio nostrum sint dolore, cupiditate enim eveniet? Eum harum odio eligendi pariatur est sint illo quod ipsam tempora, suscipit laudantium quo error aliquam mollitia voluptatum sit sequi iste temporibus eveniet, quas ipsum. Porro at, debitis iste qui ad quia illo ipsa quo consequatur, exercitationem sed, architecto veniam est assumenda eligendi numquam minus tempore vitae aliquid esse. Vel quis soluta nesciunt porro ad! Ratione voluptatem, officia illum sequi fugit praesentium laboriosam molestias dolores ea incidunt blanditiis, quo? Odit, atque.
-          </div>
+          <section class="clients">
+            <h3 class="clients-caption">
+            Наши клиентами уже стало более 100 компаний
+            </h3>
+            <div class="clients-list">
+              <div class="thumbnails">
+                <a class="buttons prev pull-left" href="#"></a>
+                <div class="viewport">
+                  <ul class="overview">
+                    <li><img src="css/images/logo-a.png" /></li>
+                    <li><img src="css/images/logo-b.png" /></li>
+                    <li><img src="css/images/logo-c.png" /></li>
+                    <li><img src="css/images/logo-d.png" /></li>
+                    <li><img src="css/images/logo-e.png" /></li>
+                  </ul>
+                </div>
+                <a class="buttons next pull-right" href="#"></a>
+              </div>
+            </div>
+          </section>
         </div>
+      </div>
     </div>
     <div class="download-demo-bg full-width">
         <div class="wrapper">
