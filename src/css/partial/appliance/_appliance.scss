@@ -1,7 +1,9 @@
 .appliance {
-  margin-top: $margin-huge;
+  margin-top: $margin-huge + 25;
   .appliance-caption {
     line-height: 32px;
+
+    margin-top: $margin-huge;
 
     text-align: center;
     text-transform: uppercase;

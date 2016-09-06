@@ -1,0 +1,117 @@
+.products-caption {
+  line-height: 32px;
+
+  margin-top: $margin-huge + 25;
+  margin-bottom: $margin-huge + 25;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+.products-bg {
+  width: 100%;
+  min-height: 805px;
+
+  background: url('images/products-bg.png');
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.products-list {
+  display: table-cell;
+
+  height: 805px;
+
+  vertical-align: middle;
+}
+.products-card {
+  //display: table-cell;
+
+  width: 100;
+  min-height: 400px;
+  padding: 0;
+
+  vertical-align: middle;
+
+  opacity: .9;
+  color: $white;
+  .products-content {
+    font-weight: bold;
+
+    padding: 35px 0 15px;
+
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .product-img {
+    width: 100%;
+    height: 180px;
+  }
+  .products-title,.products-info {
+    font-weight: normal;
+
+    padding: 5px 20px;
+
+    text-align: center;
+    text-transform: none;
+  }
+  .btn.btn-normal {
+    transition: all 1.2s;
+
+    opacity: 0;
+  }
+  &-first,&-second,&-third {
+    transition: all .8s;
+    &:hover {
+      cursor: pointer;
+
+      background: $white;
+      .products-title {
+        color: $base-blue;
+      }
+      .products-info {
+        color: $green-gray;
+      }
+      .btn.btn-normal {
+        opacity: 1;
+      }
+    }
+  }
+  &-first {
+    background: $green-gray;
+    .product-img {
+      background: url('images/enterprise-suite.png') no-repeat;
+      background-position: 50% 50%;
+    }
+    &:hover {
+      .product-img {
+        background: url('images/enterprise-suite-hover.png') no-repeat;
+        background-position: 54% 50%;
+      }
+    }
+  }
+  &-second {
+    background: $base-blue;
+    .product-img {
+      background: url('images/oberon-product.png') no-repeat;
+      background-position: 50% 50%;
+    }
+    &:hover {
+      .product-img {
+        background: url('images/oberon-product-hover.png') no-repeat;
+        background-position: 56% 50%;
+      }
+    }
+  }
+  &-third {
+    background: $light-blue;
+    .product-img {
+      background: url('images/tp-secure.png') no-repeat;
+      background-position: 50% 50%;
+    }
+    &:hover {
+      .product-img {
+        background: url('images/tp-secure-hover.png') no-repeat;
+        background-position: 56% 50%;
+      }
+    }
+  }
+}
