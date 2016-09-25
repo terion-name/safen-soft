@@ -1,5 +1,10 @@
 body {
   font: $base-regular-font;
+
+  overflow-x: hidden;
+
+  min-width: 320px;
+
   color: $base-gray;
 }
 
@@ -24,10 +29,11 @@ body {
 
 a {
   text-decoration: none;
+
   color: $base-gray;
-  &:hover,
-  &:focus {
+  &:hover,&:focus {
     text-decoration: none;
+
     color: $base-blue;
   }
 }
@@ -35,12 +41,11 @@ a {
 ul {
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
-*,
-*:after,
-*:before {
+*,*:after,*:before {
   margin: 0;
   padding: 0;
 

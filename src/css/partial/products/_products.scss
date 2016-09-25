@@ -1,8 +1,9 @@
 .products-caption {
+  font-size: 34px;
   line-height: 32px;
 
   margin-top: $margin-huge + 25;
-  margin-bottom: $margin-huge + 25;
+  margin-bottom: $margin-huge;
 
   text-align: center;
   text-transform: uppercase;
@@ -23,9 +24,6 @@
   vertical-align: middle;
 }
 .products-card {
-  //display: table-cell;
-
-  width: 100;
   min-height: 400px;
   padding: 0;
 
@@ -113,5 +111,20 @@
         background-position: 56% 50%;
       }
     }
+  }
+}
+
+
+
+@media only screen and (max-width: 480px) {
+  .products {
+    margin-top: 20px;
+  }
+  .products-caption {
+    font-size: 24px;
+    line-height: 28px;
+
+    margin-top: 30px;
+    margin-bottom: 20px;
   }
 }

@@ -1,21 +1,64 @@
 .download-demo-bg {
-  height: 220px;
+  min-height: 230px;
+
   background: $demo-gray;
 }
 .download-demo {
   display: table;
+
   width: 100%;
-  margin: $margin-default 0 0 0;
+  margin: 0;
+  padding: 30px 0;
+
   background: $demo-gray;
   &-content {
     position: relative;
+
     display: table-cell;
+
     margin: auto;
+
     text-align: center;
     vertical-align: middle;
   }
   &-caption {
-    margin-bottom: 45px;
+    font-size: 34px;
+    line-height: 38px;
+
+    margin-bottom: 50px;
+
     text-transform: uppercase;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .download-demo {
+    margin-top: 20px;
+    .download-demo-caption {
+      font-size: 24px;
+      line-height: 28px;
+
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+    .btn-demo {
+      font-size: 20px;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
+  .download-demo {
+    margin-top: 28px;
+    .download-demo-caption {
+      font-size: 20px;
+      line-height: 24px;
+
+      margin-bottom: 30px;
+    }
+    .btn-demo {
+      font-size: 14px;
+    }
   }
 }

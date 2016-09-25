@@ -1,0 +1,130 @@
+.safety {
+  margin-bottom: 85px;
+  .safety-content {
+    position: relative;
+
+    width: 100%;
+    margin-bottom: 40px;
+
+    background: linear-gradient(to left, $light-blue 0%,  $light-blue 50%,  $light-blue 50%, $white 50%, $white 100%);
+    background-color: white;
+    background-size: 100% 270px;
+  }
+  .safety-caption {
+    font-size: 34px;
+    line-height: 32px;
+
+    margin-top: $margin-huge + 25;
+    margin-bottom: $margin-huge;
+
+    text-align: center;
+    text-transform: uppercase;
+  }
+  ol {
+    font-size: 18px;
+    line-height: 28px;
+
+    position: relative;
+
+    max-width: 425px;
+    padding-left: 55px;
+
+    list-style-type: none;
+
+    counter-reset: lis attr(start, number, 0);
+    letter-spacing: .02%;
+
+    color: $base-gray;
+  }
+  li {
+    position: relative;
+
+    margin-bottom: 20px;
+
+    counter-increment: lis;
+  }
+  li:before {
+    font-size: 28px;
+
+    position: absolute;
+    top: 20%;
+
+    margin-left: -50px;
+
+    content: '0'counter(lis);
+
+    color: $ol-item-color;
+  }
+  li:after {
+    position: absolute;
+    top: 0;
+    right: -50px;
+
+    content: '';
+
+    @include sprite($s-arrow-right);
+  }
+  .safety-list {
+    margin-right: -15px;
+    padding: 10px 0;
+
+    background: $white;
+  }
+  .safety-about {
+    height: 100%;
+  }
+  .safety-info {
+    margin-left: 35px;
+    padding: 20px;
+
+    text-align: center;
+
+    color: $white;
+    background: $light-blue;
+    h4 {
+      font-size: 16px;
+      line-height: 24px;
+
+      margin-bottom: 35px;
+    }
+  }
+}
+.safety-subcaption {
+  margin: auto;
+
+  text-align: center;
+  h4 {
+    font-size: 20px;
+    line-height: 24px;
+
+    text-transform: uppercase;
+
+    color: $light-blue;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .safety {
+    margin-bottom: 20px;
+    .safety-caption {
+      font-size: 24px;
+      line-height: 28px;
+
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+    .safety-content {
+      margin-bottom: 20px;
+    }
+    .safety-subcaption h4 {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  .safety ol {
+    margin: auto;
+  }
+  .safety li:after {
+    display: none;
+  }
+}

@@ -1,7 +1,8 @@
 .appliance {
-  margin-top: $margin-huge + 25;
+  margin-top: $margin-huge + 30;
   .appliance-caption {
-    line-height: 32px;
+    font-size: 34px;
+    line-height: 38px;
 
     margin-top: $margin-huge;
 
@@ -16,22 +17,22 @@
     }
   }
   .appliance-image {
-    width: 220px;
-    height: 200px;
+    max-width: 220px;
     margin: auto;
     margin-top: $margin-default;
     margin-bottom: $margin-default;
+    img {
+      max-width: 100%;
+    }
   }
-  .appliance-a {
-    @include sprite($s-case-a);
-  }
-  .appliance-b {
-    @include sprite($s-case-b);
-  }
-  .appliance-c {
-    @include sprite($s-case-c);
-  }
-  .appliance-d {
-    @include sprite($s-case-d);
+}
+
+@media only screen and (max-width: 480px) {
+  .appliance {
+    margin-top: 20px;
+    .appliance-caption {
+      font-size: 24px;
+      line-height: 28px;
+    }
   }
 }
