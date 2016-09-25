@@ -1,11 +1,13 @@
 .clients {
   margin-top: $margin-huge;
   .clients-caption {
-    line-height: 32px;
+    font-size: 34px;
+    line-height: 38px;
+
+    margin-bottom: $margin-huge;
 
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: $margin-huge;
   }
   .clients-list {
     margin: $margin-huge auto $margin-default;;
@@ -23,6 +25,8 @@
   }
   .viewport {
     display: table-cell;
+
+    vertical-align: middle;
   }
   .overview {
     display: table;
@@ -40,6 +44,19 @@
     @include sprite($s-arrow-circle);
     &.prev {
       transform: rotate(180deg);
+    }
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
+  .clients {
+    margin-top: 20px;
+    .clients-caption {
+      font-size: 24px;
+      line-height: 28px;
+
+      margin-bottom: 10px;
     }
   }
 }
