@@ -1,0 +1,142 @@
+.how-it-works-details {
+  @media #{$tablet-large} {
+    background: linear-gradient(90deg, $white 55%, $base-blue 55%, $base-blue);
+  }
+  .how-it-works-details-holder {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    @media #{$tablet-large} {
+      padding-right: 0;
+    }
+  }
+  .steps, .desc {
+    width: 100%;
+    flex-wrap: wrap;
+    @media #{$tablet-large} {
+      width: 50%;
+      flex-wrap: nowrap;
+    }
+  }
+  .steps {
+    ol {
+      height: 100%;
+      width: 100%;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-flow: column;
+      align-items: stretch;
+      justify-content: space-between;
+      counter-reset: how-steps;
+      padding-right: 30px;
+      @media #{$screen-large} {
+        padding-right: 130px;
+      }
+    }
+    li {
+      margin: 0;
+      padding: 0 32px 0 0;
+      counter-increment: how-steps;
+      display: flex;
+      align-items: center;
+      color: $base-gray;
+      transition: color 0.3s;
+      position: relative;
+      min-height: 32px;
+      &:before {
+        content: counter(how-steps, decimal-leading-zero);
+        font-size: 22px;
+        margin-right: 30px;
+        color: $light-gray;
+        transition: color 0.3s;
+      }
+      @media #{$tablet-large} {
+        &:after {
+          content: '';
+          @include sprite($s-arrow-right-circle);
+          position: absolute;
+          left: calc(100% - 32px);
+          top: 50%;
+          transform: translateY(-50%);
+
+        }
+      }
+      &:hover {
+        color: $base-blue;
+        &:before {
+          color: $base-blue;
+        }
+        &:after {
+          @include sprite($s-arrow-right-long);
+          transition: width 0.2s;
+        }
+      }
+    }
+  }
+  .desc {
+    background: $base-blue;
+    color: $white;
+    counter-reset: how-steps-details -1;
+  }
+  .step-details {
+    padding: 80px 100px 110px 80px;
+    position: relative;
+    box-sizing: border-box;
+    counter-increment: how-steps-details;
+    overflow: hidden;
+    min-height: 275px;
+    p {
+      margin: 0;
+      position: relative;
+      z-index: 5;
+    }
+    &:not(.active) {
+      display: none;
+    }
+    &:before {
+      content: counter(how-steps-details, decimal-leading-zero);
+      font-weight: bold;
+      font-size: 310px;
+      line-height: 310px;
+      opacity: 0.05;
+      color: $white;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-40%);
+    }
+    &:after {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    &.default {
+      text-align: center;
+      padding-bottom: 160px;
+      &:after {
+        content: url("images/product/how0.png");
+        right: auto;
+        left: 50%;
+        bottom: 30px;
+        transform: translateX(-50%);
+      }
+      &:before {
+        content: none;
+      }
+    }
+    &.step-1:after {
+      content: url("images/product/how1.png");
+    }
+    &.step-2:after {
+      content: url("images/product/how2.png");
+    }
+    &.step-3:after {
+      content: url("images/product/how3.png");
+    }
+    &.step-4:after {
+      content: url("images/product/how4.png");
+    }
+  }
+}
