@@ -500,6 +500,11 @@ ol {
     transition: height 0.3s;
     background-position: center;
     background-size: cover;
+    overflow: hidden;
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &.expand {
