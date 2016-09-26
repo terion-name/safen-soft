@@ -7,11 +7,11 @@
     width: 100%;
     height: 494px;
 
-    background: url('images/gui-bg.jpg' );
+    background: url('images/gui-bg.jpg');
     background-position: 50% 50%;
     background-size: cover;
 
-    @include abs(0, 0, 0 ,0);
+    @include abs(0, 0, 0, 0);
   }
   &-content {
     .gui-title {
@@ -27,6 +27,7 @@
     background: $light-gray;
   }
 }
+
 .center-block {
   width: 370px;
 }
@@ -68,7 +69,7 @@
     width: 100%;
     height: 180px;
   }
-  .products-caption,.products-info {
+  .products-caption, .products-info {
     font-weight: normal;
 
     padding: 5px 20px;
@@ -81,7 +82,7 @@
 
     opacity: 0;
   }
-  &-first,&-second,&-third {
+  &-first, &-second, &-third {
     transition: all .8s;
     &:hover {
       cursor: pointer;
@@ -139,11 +140,11 @@
   }
 }
 
-
 // DROPDOWNS
 .selectors {
   min-height: 250px;
 }
+
 .dropdown.dropdown-default {
   .btn {
     font-size: $small-size;
@@ -306,6 +307,7 @@
     margin-right: -30px;
   }
 }
+
 table.tbl {
   border-spacing: 15px 0;
   //margin-left: -15px;
@@ -313,7 +315,7 @@ table.tbl {
   border-collapse: separate;
   width: 100%;
   @media #{$screen-small} {
-    border-spacing: 30px 0!important;
+    border-spacing: 30px 0 !important;
     //margin-left: -15px;
     //width: calc(100% + 15px);
   }
@@ -406,23 +408,23 @@ ol {
   align-items: stretch;
   justify-content: space-between;
   counter-reset: ol;
-}
-li {
-  padding: 0;
-  counter-increment: ol;
-  display: flex;
-  align-items: center;
-  color: $base-gray;
-  position: relative;
-  margin: 15px 0;
-  &:before {
-    content: counter(ol, decimal-leading-zero);
-    margin-right: 1em;
-    color: $light-gray;
-    font-size: 1.2em;
+
+  li {
+    padding: 0;
+    counter-increment: ol;
+    display: flex;
+    align-items: center;
+    color: $base-gray;
+    position: relative;
+    margin: 15px 0;
+    &:before {
+      content: counter(ol, decimal-leading-zero);
+      margin-right: 1em;
+      color: $light-gray;
+      font-size: 1.2em;
+    }
   }
 }
-
 
 .distributor-block {
 
@@ -514,4 +516,69 @@ li {
     }
   }
 
+}
+
+.news-item {
+  font-size: 16px;
+  margin-bottom: 50px;
+  @media #{$tablet-small} {
+    display: flex;
+  }
+  .media {
+    width: 100%;
+    @media #{$tablet-small} {
+      width: 32%;
+    }
+    flex-shrink: 0;
+    img {
+      width: 100%;
+    }
+  }
+  .txt {
+    padding-top: 30px;
+    @media #{$tablet-small} {
+      padding-top: 0;
+      padding-left: 30px;
+    }
+  }
+  h1 {
+    font-size: 1em;
+    padding-bottom: 20px;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: $base-blue;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 170px;
+      height: 2px;
+      left: 0;
+      bottom: 0;
+      background: $base-gray;
+    }
+    a {
+      color: inherit;
+    }
+  }
+  .meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875em;
+    .category {
+      border-bottom: 1px dashed;
+      &:hover {
+        border-color: transparent;
+      }
+    }
+  }
+  &.primary {
+    h1 {
+      font-size: 1.375em;
+    }
+    .meta {
+      margin-bottom: 20px;
+    }
+  }
 }
