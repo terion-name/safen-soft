@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>product - Oberon</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"
+            integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.min.js"></script>
+</head>
+<body>
+//= include/header-base.html
+<div class="distributors-section">
+
+    <div class="wrapper">
+        <div class="container">
+            <h3 class="large-caption">Дистрибьюторы</h3>
+
+            <article class="distributor-block">
+
+                <header>
+                    <h1 class="city">КАЛИНИГРАД</h1>
+                    <button class="map-trigger" onclick="$(this).closest('.distributor-block').toggleClass('expand')">
+                        <span class="show-map">Показать на карте</span>
+                        <span class="hide-map">Скрыть карту</span>
+                    </button>
+                </header>
+
+                <div class="location">
+
+                    <address class="str">
+                        г. Калиниград, Гурьевский р-н, пос. Васильково,<br>
+                        ул. 4-я Большая Окружная 61-б<br>
+                        (Пн-Сб 08:00-23:00, Вс 09:00-20:00)
+                    </address>
+
+                    <address class="phones">
+                        +7(4012) 57 32 77,<br>
+                        +7(4012) 77 86 66<br>
+                        +7(911) 491 94 61
+                    </address>
+
+                    <a href="mailto:sales@safensoft.ru" class="email">sales@safensoft.ru</a>
+
+                </div>
+
+                <div class="map" style="background-image: url('img/map.png')">
+
+                </div>
+
+
+            </article>
+
+            <article class="distributor-block">
+
+                <header>
+                    <h1 class="city">КАЛИНИГРАД</h1>
+                    <button class="map-trigger" onclick="$(this).closest('.distributor-block').toggleClass('expand')">
+                        <span class="show-map">Показать на карте</span>
+                        <span class="hide-map">Скрыть карту</span>
+                    </button>
+                </header>
+
+                <div class="location">
+
+                    <address class="str">
+                        г. Калиниград, Гурьевский р-н, пос. Васильково,<br>
+                        ул. 4-я Большая Окружная 61-б<br>
+                        (Пн-Сб 08:00-23:00, Вс 09:00-20:00)
+                    </address>
+
+                    <address class="phones">
+                        +7(4012) 57 32 77,<br>
+                        +7(4012) 77 86 66<br>
+                        +7(911) 491 94 61
+                    </address>
+
+                    <a href="mailto:sales@safensoft.ru" class="email">sales@safensoft.ru</a>
+
+                </div>
+
+                <div class="map" style="background-image: url('img/map.png')">
+
+                </div>
+
+
+            </article>
+
+        </div>
+    </div>
+
+    //= include/download-demo/download-demo.html
+</div>
+//= include/footer.html
+</body>
+</html>
