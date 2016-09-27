@@ -7,11 +7,11 @@
     width: 100%;
     height: 494px;
 
-    background: url('images/gui-bg.jpg' );
+    background: url('images/gui-bg.jpg');
     background-position: 50% 50%;
     background-size: cover;
 
-    @include abs(0, 0, 0 ,0);
+    @include abs(0, 0, 0, 0);
   }
   &-content {
     .gui-title {
@@ -27,6 +27,7 @@
     background: $light-gray;
   }
 }
+
 .center-block {
   width: 370px;
 }
@@ -68,7 +69,7 @@
     width: 100%;
     height: 180px;
   }
-  .products-caption,.products-info {
+  .products-caption, .products-info {
     font-weight: normal;
 
     padding: 5px 20px;
@@ -81,7 +82,7 @@
 
     opacity: 0;
   }
-  &-first,&-second,&-third {
+  &-first, &-second, &-third {
     transition: all .8s;
     &:hover {
       cursor: pointer;
@@ -139,11 +140,11 @@
   }
 }
 
-
 // DROPDOWNS
 .selectors {
   min-height: 250px;
 }
+
 .dropdown.dropdown-default {
   .btn {
     font-size: $small-size;
@@ -314,6 +315,7 @@
     margin-left: -30px;
   }
 }
+
 table.tbl {
   width: 100%;
 
@@ -322,7 +324,7 @@ table.tbl {
   //margin-right: -15px;
   border-collapse: separate;
   @media #{$screen-small} {
-    border-spacing: 30px 0!important;
+    border-spacing: 30px 0 !important;
     //margin-left: -15px;
     //width: calc(100% + 15px);
   }
@@ -435,27 +437,182 @@ ol.o-list {
   flex-flow: column;
   align-items: stretch;
   justify-content: space-between;
+
   li {
-    position: relative;
-
-    display: flex;
-
-    margin: 15px 0;
     padding: 0;
-
     counter-increment: ol;
-
-    color: $base-gray;
-
+    display: flex;
     align-items: center;
+    color: $base-gray;
+    position: relative;
+    margin: 15px 0;
     &:before {
-      font-size: 1.2em;
-
-      margin-right: 1em;
-
       content: counter(ol, decimal-leading-zero);
-
+      margin-right: 1em;
       color: $light-gray;
+      font-size: 1.2em;
+    }
+  }
+}
+
+.distributor-block {
+
+  margin-bottom: 50px;
+
+  header {
+    @media #{$tablet-small} {
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .map-trigger {
+      width: 238px;
+      height: 39px;
+      background: url('images/map-button.png');
+      border: none;
+      text-transform: uppercase;
+      text-align: left;
+      padding-left: 25px;
+      padding-top: 5px;
+      margin-bottom: 20px;
+      outline: none;
+      @media #{$tablet-small} {
+        margin-bottom: 0;
+      }
+      .hide-map {
+        display: none;
+      }
+    }
+
+  }
+
+  .city {
+    font-size: 22px;
+    margin: 0;
+    padding-bottom: 20px;
+    position: relative;
+    margin-bottom: 20px;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 170px;
+      height: 2px;
+      left: 0;
+      bottom: 0;
+      background: $base-gray;
+    }
+  }
+
+  .location {
+    @media #{$tablet-large} {
+      display: flex;
+      justify-content: flex-start;
+    }
+    .str {
+      display: block;
+      width: 100%;
+      @media #{$tablet-large} {
+        width: 50%;
+      }
+
+    }
+    .email {
+      margin: 0 0 0 auto;
+    }
+  }
+  .map {
+    width: 100%;
+    height: 0;
+    transition: height 0.3s;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &.expand {
+    .map {
+      height: 260px;
+    }
+    .map-trigger {
+      .hide-map {
+        display: inline;
+      }
+      .show-map {
+        display: none;
+      }
+    }
+  }
+
+}
+
+.news-item {
+  font-size: 16px;
+  margin-bottom: 50px;
+  @media #{$tablet-small} {
+    display: flex;
+  }
+  .media {
+    width: 100%;
+    @media #{$tablet-small} {
+      width: 32%;
+    }
+    flex-shrink: 0;
+    img {
+      width: 100%;
+    }
+  }
+  .txt {
+    padding-top: 30px;
+    @media #{$tablet-small} {
+      padding-top: 0;
+      padding-left: 30px;
+    }
+  }
+  h1 {
+    font-size: 1em;
+    padding-bottom: 20px;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: $base-blue;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 170px;
+      height: 2px;
+      left: 0;
+      bottom: 0;
+      background: $base-gray;
+    }
+    a {
+      color: inherit;
+    }
+  }
+  .meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875em;
+    .category {
+      border-bottom: 1px dashed;
+      &:hover {
+        border-color: transparent;
+      }
+    }
+  }
+  &.primary {
+    h1 {
+      font-size: 1.375em;
+    }
+    .meta {
+      margin-bottom: 20px;
     }
   }
 }
