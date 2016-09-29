@@ -459,6 +459,13 @@ ol.o-list {
 
   margin-bottom: 50px;
 
+  &.categorizer {
+    margin-bottom: 0;
+    h1 {
+      text-transform: uppercase;
+    }
+  }
+
   header {
     @media #{$tablet-small} {
       display: flex;
@@ -488,7 +495,7 @@ ol.o-list {
 
   }
 
-  .city {
+  .city, .separator {
     font-size: 22px;
     margin: 0;
     padding-bottom: 20px;
