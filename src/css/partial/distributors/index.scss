@@ -1,0 +1,86 @@
+.header-distributors {
+  background: #000 url('images/distributors-head.jpg') center no-repeat;
+  background-size: cover;
+  color: $white;
+  text-align: center;
+  padding-bottom: 70px;
+
+  h1.large-caption {
+    font-weight: bold;
+  }
+  h2.large-caption {
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+
+  .about {
+    margin: 35px 0;
+    font-size: 16px;
+    line-height: 1.2em;
+  }
+
+  select, button {
+    outline: none;
+    height: 36px;
+    border: 2px solid $white;
+    background: transparent;
+    border-radius: 18px;
+    width: 100%;
+    padding: 3px 25px 0;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  select {
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    box-sizing: border-box;
+    outline: none;
+    background: url('images/dropdown-arrow.png') no-repeat right 25px center;
+    &::-ms-expand {
+      display: none;
+    }
+    &:focus::-ms-value {
+      background: none;
+      color: inherit;
+    }
+  }
+
+  .filter {
+    margin: 10px 0 20px 0;
+    .col {
+      margin-bottom: 30px;
+    }
+  }
+
+  .contacts {
+    font-size: 18px;
+    .cnt {
+      display: flex;
+      justify-content: space-between;
+      line-height: 1.2em;
+    }
+    .col {
+      .icon {
+        padding-bottom: 15px;
+        width: 48px;
+        border-bottom: 2px solid $white;
+        text-align: center;
+        margin: 0 auto 20px;
+      }
+      &.address .icon:before {
+        content: url('images/location-w.png');
+      }
+      &.phone .icon:before {
+        content: url('images/phone-w.png');
+      }
+      &.mail .icon:before {
+        content: url('images/mail-w.png');
+      }
+    }
+
+  }
+}
