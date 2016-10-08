@@ -79,64 +79,68 @@
     background: $base-blue;
     color: $white;
     counter-reset: how-steps-details -1;
-  }
-  .step-details {
-    padding: 80px 100px 110px 80px;
-    position: relative;
-    box-sizing: border-box;
-    counter-increment: how-steps-details;
-    overflow: hidden;
-    min-height: 275px;
-    p {
-      margin: 0;
+    .step-details {
+      padding: 80px 100px 110px 80px;
       position: relative;
-      z-index: 5;
-    }
-    &:not(.active) {
-      display: none;
-    }
-    &:before {
-      content: counter(how-steps-details, decimal-leading-zero);
-      font-weight: bold;
-      font-size: 310px;
-      line-height: 310px;
-      opacity: 0.05;
-      color: $white;
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-40%);
-    }
-    &:after {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-    }
-    &.default {
-      text-align: center;
-      padding-bottom: 160px;
-      &:after {
-        content: url("images/product/how0.png");
-        right: auto;
-        left: 50%;
-        bottom: 30px;
-        transform: translateX(-50%);
+      box-sizing: border-box;
+      overflow: hidden;
+      min-height: 275px;
+      counter-increment: how-steps-details;
+      p {
+        margin: 0;
+        position: relative;
+        z-index: 5;
+      }
+      &:not(.active) {
+        //display: none;
+        height: 0!important;
+        min-height: 0!important;
+        padding: 0!important;
+        overflow: hidden!important;
       }
       &:before {
-        content: none;
+        content: counter(how-steps-details, decimal-leading-zero);
+        font-weight: bold;
+        font-size: 310px;
+        line-height: 310px;
+        opacity: 0.05;
+        color: $white;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-40%);
       }
-    }
-    &.step-1:after {
-      content: url("images/product/how1.png");
-    }
-    &.step-2:after {
-      content: url("images/product/how2.png");
-    }
-    &.step-3:after {
-      content: url("images/product/how3.png");
-    }
-    &.step-4:after {
-      content: url("images/product/how4.png");
+      &:after {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+      &.default {
+        text-align: center;
+        padding-bottom: 160px;
+        &:after {
+          content: url("images/product/how0.png");
+          right: auto;
+          left: 50%;
+          bottom: 30px;
+          transform: translateX(-50%);
+        }
+        &:before {
+          content: none;
+        }
+      }
+      &.step-1:after {
+        content: url("images/product/how1.png");
+      }
+      &.step-2:after {
+        content: url("images/product/how2.png");
+      }
+      &.step-3:after {
+        content: url("images/product/how3.png");
+      }
+      &.step-4:after {
+        content: url("images/product/how4.png");
+      }
     }
   }
 }
