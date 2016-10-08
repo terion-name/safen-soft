@@ -144,7 +144,7 @@ gulp.task('cssOwn:build', () => {
     }))
     .pipe(sass().on('error', sass.logError))
     .pipe(prefixer({
-      browser: ['last 3 version', "> 1%", "ie 8", "ie 7"]
+      browser: ['last 5 version', "> 1%", "ie 8", "ie 7", "safari 5"]
     }))
     .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest(path.dist.css))
