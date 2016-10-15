@@ -144,14 +144,14 @@ gulp.task('cssOwn:build', () => {
     }))
     .pipe(sass().on('error', sass.logError))
     .pipe(prefixer({
-      browser: ['last 5 version', "> 1%", "ie 8", "ie 7", "safari 5"]
+      browsers: ['last 5 versions', "> 1%", "ie 10", "safari 8"]
     }))
     .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest(path.dist.css))
-    // .pipe(cssmin())
-    // .pipe(rename({
-    //   suffix: '.min'
-    // }))
+      .pipe(cssmin())
+     .pipe(rename({
+       suffix: '.min'
+     }))
     .pipe(gulp.dest(path.dist.css))
     .pipe(connect.reload())
 });
